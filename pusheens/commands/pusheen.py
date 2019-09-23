@@ -52,7 +52,7 @@ def parse():
                         version=f'{pusheens.__version__}')
     parser.add_argument('-r', '--run', action='store_true', help='pusheen will run')
     parser.add_argument('-t', '--time', type=float, default=0.04, help='set sleep time')
-    parser.add_argument('-p', '--percentage', type=int, default=70, help='set percentage of distance (0 to 1)')
+    parser.add_argument('-p', '--percentage', type=int, default=30, help='set percentage of distance (0 to 100)')
     args = parser.parse_args()
     if args.percentage > 100:
         args.percentage = 100
