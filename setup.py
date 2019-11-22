@@ -1,5 +1,5 @@
 import os
-import pusheens
+import pusheen
 from setuptools import find_packages
 from distutils.core import setup
 
@@ -12,8 +12,8 @@ def read(filename):
         return f.read()
 
 setup(
-    name='Pusheens',
-    version=pusheens.__version__,
+    name='Pusheen',
+    version=pusheen.__version__,
     description='Easily display puseens.',
     long_description=read('README.md'),
     author='Kazuki Yoshida',
@@ -26,7 +26,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'pusheen = pusheens.commands.pusheen:main',
+            'pusheen = pusheen.pusheen:main',
         ]
     },
 )
