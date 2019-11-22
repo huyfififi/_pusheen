@@ -1,3 +1,3 @@
-from pusheens import version
+from pusheen import version
 
 __version__ = version.__version__
