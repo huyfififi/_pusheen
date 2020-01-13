@@ -72,10 +72,12 @@ def swing_pusheen(counter: int, frequency: int):
 
 def display_pusheen(time_sleep, percentage_show, from_right):
     if from_right:
+        print('\033[34m', end='')
         for i in range(int(SIZE_COLUMNS_TERMINAL * percentage_show / 100)):
             time.sleep(time_sleep)
             print('\n'.join(map(lambda x: (' ' * (SIZE_COLUMNS_TERMINAL - i) + x)[:SIZE_COLUMNS_TERMINAL], swing_pusheen(i, 10))) + '\n' + '\033[16A')
     else:
+        print('\033[31m', end='')
         for i in reversed(range(int(SIZE_COLUMNS_TERMINAL * percentage_show / 100))):
             time.sleep(time_sleep)
             print('\n'.join(map(lambda x: (' ' * (SIZE_COLUMNS_TERMINAL - i) + x)[:SIZE_COLUMNS_TERMINAL], swing_pusheen(i, 10))) + '\n' + '\033[16A')
